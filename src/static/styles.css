@@ -1,0 +1,182 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('image3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    background-attachment: fixed;
+    min-height: 100vh;
+    align-content: space-between;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+nav {
+    background-color: rgba(16, 18, 17, 0.5);
+    backdrop-filter: blur(20px);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  
+  .left-column,
+  .right-column {
+    flex-basis: calc(50% - 10px);
+  }
+  
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    flex: 1;
+  }
+  
+  input[type='submit'] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.5s ease-out;
+  }
+  
+  input[type='submit']:hover {
+    background-color: orange;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .container
+  {
+    margin-top: 100px;
+  }
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #40E0D0;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+  
+nav h1 {
+    color: #40E0D0;
+    margin: 0;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+    padding: 50px;
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: rgba(16, 18, 17, 0.5);
+    backdrop-filter: blur(20px);
+    color: #fff;
+    text-align: center;
+    padding: 0em -1;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+/* Add your existing styles here */
+
+/* Additional styles for the contact form */
+#contact {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
