@@ -1,0 +1,39 @@
+<!-- Update the HTML code for about.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+    <section id="about">
+        <div class="container">
+            <h2>About Brain Health Hub</h2>
+            <p>Welcome to Brain Health Hub, a dedicated platform designed to raise awareness and provide valuable insights into brain health and tumor detection. Here's a closer look at what our application aims to achieve:</p>
+
+            <h3>Our Mission</h3>
+            <p>At Brain Health Hub, our primary mission is to make information about brain tumors accessible to everyone. We believe that knowledge empowers individuals to make informed decisions about their health. By providing comprehensive information, we aim to contribute to the early detection and understanding of brain tumors.</p>
+
+            <h3>Why Brain Tumor Detection?</h3>
+            <p>Brain tumors can have a significant impact on individuals and their families. Early detection plays a crucial role in improving treatment outcomes and enhancing the quality of life for those affected. Our application utilizes advanced machine learning algorithms to assist in the early detection of brain tumors through the analysis of MRI and X-ray images.</p>
+
+            <h3>Key Features</h3>
+            <p>Brain Health Hub offers a user-friendly interface with the following key features:</p>
+            <ul>
+                <li><strong>Tumor Detection:</strong> Users can upload MRI or X-ray images for automated brain tumor detection using our trained machine learning model.</li>
+                <li><strong>Information Hub:</strong> Explore detailed information about different types of brain tumors, their symptoms, diagnosis, and treatment options.</li>
+                <li><strong>Health Resources:</strong> Access resources, articles, and the latest advancements in brain tumor research to stay informed about your health.</li>
+                <li><strong>Contact and Support:</strong> Connect with healthcare professionals, find support groups, and seek assistance in navigating the challenges of living with a brain tumor.</li>
+            </ul>
+
+            <h3>Empowering Users</h3>
+            <p>We believe that by combining technology with valuable information, we can empower users to take proactive steps towards their brain health. Whether you are seeking information about brain tumors, undergoing diagnosis, or supporting a loved one, Brain Health Hub is here to assist you on your journey.</p>
+
+            <h3>Contact Us</h3>
+            <p>We welcome your feedback and questions. If you have inquiries about the application, suggestions for improvement, or if you'd like to contribute to our mission, feel free to reach out through our <a href="{{ url_for('contact') }}">Contact Section</a>.</p>
+
+
+            <h3>Thank You for Joining Us on This Journey</h3>
+            <p>We appreciate your interest in Brain Health Hub. Together, let's create a community focused on brain health awareness and support. Stay informed, stay connected, and prioritize your brain health journey with us.</p>
+        </div>
+    </section>
+{% endblock %}

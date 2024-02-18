@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Success{% endblock %}
+
+{% block content %}
+    <section id="success" style="background-image: url('{{ url_for('static', filename='success-background.jpg') }}');">
+        <h2>Test Successful</h2>
+        <p>The file '{{ filename }}' was successfully uploaded and processed.</p>
+    </section>
+{% endblock %}

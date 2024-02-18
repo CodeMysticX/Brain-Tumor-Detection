@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}Test{% endblock %}
+
+{% block content %}
+    <section id="test" style="background-image: url('{{ url_for('static', filename='test-background.jpg') }}');">
+        <div class="container text-center" style="padding: 50px 0;">
+            <h2>Test Your Brain Health</h2>
+            
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h3>Upload an MRI image for brain tumor detection</h3>
+                <p>For accurate results, please ensure your image meets the following criteria:</p>
+                <ul>
+                    <li>Upload MRI  images only</li>
+                    <li>Ensure the image is clear and well-lit</li>
+                    <li>Use high-resolution images for better accuracy</li>
+                </ul>
+            </div>
+
+            <!-- Add the file upload form -->
+            <form action="{{ url_for('test') }}" method="post" enctype="multipart/form-data" style="margin-top: 20px;">
+                <div class="form-group">
+                    <label for="fileUpload">Choose an MRI image:</label>
+                    <input type="file" name="file" id="fileUpload" accept=".jpg, .jpeg, .png" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Test Now</button>
+            </form>
+
+            <!-- Display the uploaded image and result -->
+            {% if img_base64 %}
+                <div style="margin-top: 20px;">
+                    <img src="{{ img_base64 }}" alt="Uploaded Image" style="max-width: 100%;">
+                </div>
+            {% endif %}
+            {% if prediction %}
+                <div style="margin-top: 10px;">
+                    <h3>Result: {{ prediction }}</h3>
+                    {% if emoji %}
+                        <p>Emoji: {{ emoji }}</p>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

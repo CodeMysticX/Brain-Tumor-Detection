@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Result{% endblock %}
+
+{% block content %}
+    <section id="result" style="background-image: url('{{ url_for('static', filename='result-background.jpg') }}');">
+        <h2>Test Result</h2>
+        <p>The file '{{ filename }}' was successfully uploaded and processed.</p>
+
+        {% if img_base64 %}
+            <div style="margin-top: 30px;">
+                <h4>Uploaded Image:</h4>
+                <img src="{{ img_base64 }}" alt="Uploaded Image" style="max-width: 100%;">
+            </div>
+        {% endif %}
+
+        {% if result %}
+            <div style="margin-top: 30px;">
+                <h4>Result:</h4>
+                {% if result == 'no_tumor' %}
+                    <p>Great news! No brain tumor detected. 😊</p>
+                {% else %}
+                    <p>Potential brain tumor detected. Type: {{ result }}. Please consult with a medical professional. Danger! ⚠️</p>
+                    <!-- You can add more details or instructions based on the specific result -->
+                {% endif %}
+            </div>
+        {% endif %}
+    </section>
+{% endblock %}

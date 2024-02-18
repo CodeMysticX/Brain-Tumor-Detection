@@ -1,0 +1,45 @@
+<!-- Update contact.html -->
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+    <section id="contact" style="background-image: url('{{ url_for('static', filename='contact-background.jpg') }}');">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, feel free to reach out to us.</p>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Contact Information</h4>
+                    <p>Email: contact@brainhealthhub.com</p>
+                    <p>Email: saurabhash15@gmail.com</p>
+                    <p>Phone: +919548176684</p>
+                </div>
+
+                <div class="col-md-6">
+                    <h4>Send us a Message</h4>
+                    <form action="{{ url_for('contact') }}" method="post">
+                        <!-- Include any form fields you need -->
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
